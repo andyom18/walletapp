@@ -37,7 +37,8 @@ def test_wallet_spend_cash_raises_exception_on_insufficient_amount(empty_wallet)
 @pytest.mark.parametrize("earned, spent, expected", [
       (30,20,110),
       (20,2,118),
-      (1000,1000,100)
+      (1000,1000,100),
+        (0,100,0)
 ])
 def test_transactions(my_wallet, earned, spent, expected):
   my_wallet.add_cash(earned)
