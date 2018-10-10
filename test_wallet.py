@@ -19,12 +19,19 @@ def my_wallet():
 def test_default_initial_amount(empty_wallet):
   assert empty_wallet.balance == 0
 
+def test_default_initial_savings(empty_wallet):
+  assert empty_wallet.savings == 0
+
 def test_setting_initial_amount(wallet):
   assert wallet.balance == 20
 
 def test_wallet_add_cash(wallet):
   wallet.add_cash(80)
   assert wallet.balance == 100
+
+def test_wallet_save_cash(wallet):
+  wallet.save_cash(10)
+  assert wallet.savings == 10
 
 def test_wallet_spend_cash(wallet):
   wallet.spend_cash(10)

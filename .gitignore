@@ -1,1 +1,7 @@
 log.txt
+.idea/*
+.idea/workspace.xml
+workspace.xml
+.gitignore
+__pycache__/*
+*.pyc
